@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa de Meme | Vista o seu humor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FFD700; /* Amarelo meme */
+            --secondary: #6A5ACD; /* Roxo vibrante */
+            --dark: #2B2B2B;
+            --light: #F4F4F9;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Cabeçalho e Hero */
+        header {
+            background-color: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+            border-bottom: 8px solid var(--primary);
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 5rem;
+            letter-spacing: 2px;
+            text-shadow: 4px 4px 0px var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Grade de Produtos */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cartão de Produto */
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: var(--primary);
+        }
+
+        /* Placeholder de Imagem (Substitua pelas fotos das camisas) */
+        .card-img {
+            width: 100%;
+            height: 250px;
+            background-color: #E0E0E0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            border-bottom: 3px solid var(--light);
+        }
+
+        .card-img.mockup-1 { background: #FFB6C1; }
+        .card-img.mockup-2 { background: #87CEFA; }
+        .card-img.mockup-3 { background: #98FB98; }
+        .card-img.mockup-4 { background: #DDA0DD; }
+
+        .card-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-price {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Botão Uma Penca */
+        .btn {
+            display: inline-block;
+            background-color: var(--dark);
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            transform: scale(1.05);
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--dark);
+            color: var(--white);
+            margin-top: 2rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            header p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Camisa de Meme</h1>
+        <p>A internet inteira, agora no seu guarda-roupa. 👕✨</p>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Lançamentos</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-img mockup-1">🐶</div>
+                <div class="card-content">
+                    <h3 class="card-title">Cachorro Caramelo</h3>
+                    <p class="card-price">R$ 69,90</p>
+                    <a href="https://umapenca.com/sua-loja/produto-1" target="_blank" class="btn">Comprar na Uma Penca</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img mockup-2">🔥</div>
+                <div class="card-content">
+                    <h3 class="card-title">This is Fine</h3>
+                    <p class="card-price">R$ 69,90</p>
+                    <a href="https://umapenca.com/sua-loja/produto-2" target="_blank" class="btn">Comprar na Uma Penca</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img mockup-3">🐂</div>
+                <div class="card-content">
+                    <h3 class="card-title">ISTANGULL Holder</h3>
+                    <p class="card-price">R$ 79,90</p>
+                    <a href="https://umapenca.com/sua-loja/produto-3" target="_blank" class="btn">Comprar na Uma Penca</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img mockup-4">👽</div>
+                <div class="card-content">
+                    <h3 class="card-title">E.T. Bilu - Busque Conhecimento</h3>
+                    <p class="card-price">R$ 69,90</p>
+                    <a href="https://umapenca.com/sua-loja/produto-4" target="_blank" class="btn">Comprar na Uma Penca</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Camisa de Meme. Impresso e entregue com ❤️ pela Uma Penca.</p>
+    </footer>
+
+</body>
+</html>
